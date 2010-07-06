@@ -1,0 +1,15 @@
+Source: jolicloud-notifier
+Section: jolicloud/misc
+Priority: optional
+Maintainer: Jolicloud developers <developers@jolicloud.org>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://www.jolicloud.com
+
+Package: jolicloud-notifier
+Architecture: any
+Depends: apt-queue, libgtk2-gladexml-perl
+Description: Jolicloud Notifier
+ The Jolicloud notifier displays the state of the Jolicloud daemon.
+ It notifies the users of new updates from Jolicloud
+ and from the system.
