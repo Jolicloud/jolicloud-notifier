@@ -26,10 +26,45 @@ sub gtk_main_quit {
 
 sub on_buttonOK_clicked {
     my $bus = Net::DBus->system();
-    my $service = $bus->get_service( "org.freedesktop.Hal" );
-    my $object = $service->get_object( "/org/freedesktop/Hal/devices/computer",
-            "org.freedesktop.Hal.Device.SystemPowerManagement" );
-    $object->Reboot();
+    eval {
+        my $service = $bus->get_service( "org.freedesktop.Hal" );
+        my $object = $service->get_object( "/org/freedesktop/Hal/devices/computer",
+                "org.freedesktop.Hal.Device.SystemPowerManagement" );
+        $object->Reboot();
+    };
+    if ( $@ ) {
+        warn @?;
+    }
+    else {
+        return;
+    }
+
+    eval {
+        my $service = $bus->get_service( "org.freedesktop.ConsoleKit" );
+        my $object = $service->get_object( "/org/freedesktop/ConsoleKit/Manager",
+                "org.freedesktop.ConsoleKit.Manager" );
+        $object->Restart();
+    };
+    if ( $@ ) {
+        warn $@;
+    }
+    else {
+        return;
+    }
+
+    $bus = Net::DBus->session();
+    eval {
+        my $service = $bus->get_service( "org.gnome.SessionManager" );
+        my $object = $service->get_object( "/org/gnome/SessionManager",
+                "org.gnome.SessionManager" );
+        $object->RequestReboot();
+    };
+    if ( $@ ) {
+        warn $@;
+    }
+    else {
+        return;
+    }
 }
 
 sub on_buttonCancel_clicked {
