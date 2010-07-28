@@ -1,3 +1,13 @@
+jolicloud-notifier (1.0.0) robby-upgrade; urgency=low
+
+  * Created reboot-dialog wrapper script to handle running as root
+  * Set execute bit on reboot-dialog
+  * Added failover to try reboot with Hal, ConsoleKit, then
+    SessionManager.
+  * Added support to work with existing update-notifier functionality
+
+ -- Adam McDaniel <adam@jolicloud.org>  Wed, 28 Jul 2010 12:52:38 -0600
+
 jolicloud-notifier (1.0.0~0) adam-dev; urgency=low
 
   * Initial development release
