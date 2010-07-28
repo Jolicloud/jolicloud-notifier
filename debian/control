@@ -9,6 +9,7 @@ Homepage: http://www.jolicloud.com
 Package: jolicloud-notifier
 Architecture: any
 Depends: apt-queue, libgtk2-gladexml-perl
+Replaces: update-notifier
 Description: Jolicloud Notifier
  The Jolicloud notifier displays the state of the Jolicloud daemon.
  It notifies the users of new updates from Jolicloud

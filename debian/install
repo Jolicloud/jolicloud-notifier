@@ -1,2 +1,2 @@
-share/* /usr/share/jolicloud-notifier
+share/* /usr/share
 lib/* /usr/lib/jolicloud-notifier
