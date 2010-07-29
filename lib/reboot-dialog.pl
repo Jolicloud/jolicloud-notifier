@@ -3,8 +3,10 @@
 use Gtk2;
 use Gtk2::GladeXML;
 use Net::DBus;
+use Data::Dumper;
 
 
+print Dumper { %ENV };
 &reboot_dialog();
 
 sub reboot_dialog {

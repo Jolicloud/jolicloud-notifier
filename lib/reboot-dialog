@@ -16,4 +16,6 @@ if [ "x$DISPLAY" = "x" ]; then
     export DISPLAY=:0.0
 fi
 
+env
+
 /usr/lib/jolicloud-notifier/reboot-dialog.pl $@
