@@ -4,12 +4,13 @@
 # apt-queue process.
 #
 
-if [ "x$XAUTHORITY" = "x" ]; then
-    for X in /home/*/.Xauthority; do
-        export XAUTHORITY=$X
-        break
-    done
-fi
+# XAuthority may already exists, but force rediscovering the user's
+# specific version. This prevents a race condition with gksudo if it
+# happens to die before apt-queue has run us.
+for X in /home/*/.Xauthority; do
+    export XAUTHORITY=$X
+    break
+done
 
 if [ "x$DISPLAY" = "x" ]; then
     # FIXME: Do this properly!
