@@ -1,3 +1,10 @@
+jolicloud-notifier (1.0.1) robby-upgrade; urgency=low
+
+  * Added some debug logs into reboot-dialog.pl
+  * Force rediscovering $XAUTHORITY
+
+ -- Adam McDaniel <adam@jolicloud.org>  Thu, 29 Jul 2010 13:00:13 -0600
+
 jolicloud-notifier (1.0.0) robby-upgrade; urgency=low
 
   * Created reboot-dialog wrapper script to handle running as root
