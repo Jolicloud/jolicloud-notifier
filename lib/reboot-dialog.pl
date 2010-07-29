@@ -35,7 +35,7 @@ sub on_buttonOK_clicked {
         $object->Reboot();
     };
     if ( $@ ) {
-        warn @?;
+        print @?;
     }
     else {
         return;
@@ -48,7 +48,7 @@ sub on_buttonOK_clicked {
         $object->Restart();
     };
     if ( $@ ) {
-        warn $@;
+        print $@;
     }
     else {
         return;
@@ -62,7 +62,7 @@ sub on_buttonOK_clicked {
         $object->RequestReboot();
     };
     if ( $@ ) {
-        warn $@;
+        print $@;
     }
     else {
         return;

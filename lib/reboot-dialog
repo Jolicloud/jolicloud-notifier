@@ -18,4 +18,6 @@ fi
 
 env
 
-/usr/lib/jolicloud-notifier/reboot-dialog.pl $@
+echo "Calling Perl"
+/usr/lib/jolicloud-notifier/reboot-dialog.pl $@ 2>&1
+echo "done: $?"
