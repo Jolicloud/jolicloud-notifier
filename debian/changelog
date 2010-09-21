@@ -1,3 +1,11 @@
+jolicloud-notifier (1.0.2) robby; urgency=low
+
+  * Temporary injunction to disable link to update-notifier, major
+    problem found related to updates freezing (dpkg waits for apt-queue,
+    apt-queue waits for dpkg)
+
+ -- Adam McDaniel <adam@jolicloud.org>  Tue, 21 Sep 2010 12:44:42 -0600
+
 jolicloud-notifier (1.0.1) robby-upgrade; urgency=low
 
   * Added some debug logs into reboot-dialog.pl
