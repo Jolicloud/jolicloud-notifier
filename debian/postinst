@@ -3,8 +3,8 @@
 set -e
 
 case "$1" in
-    install|upgrade)
-        if dpkg --compare-versions "$2" le "1.0.2"; then
+    configure)
+        if dpkg --compare-versions "$2" le "1.1.2"; then
             echo "* Restoring update-notifiers's original update script"
             dpkg-divert --rename --remove /usr/share/update-notifier/notify-reboot-required
         fi
