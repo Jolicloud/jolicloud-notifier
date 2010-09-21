@@ -4,8 +4,8 @@ set -e
 
 case "$1" in
     remove|pruge)
-        echo "* Restoring update-notifiers's original update script"
-        dpkg-divert --rename --remove /usr/share/update-notifier/notify-reboot-required
+#        echo "* Restoring update-notifiers's original update script"
+#        dpkg-divert --rename --remove /usr/share/update-notifier/notify-reboot-required
     ;;
 esac
 
