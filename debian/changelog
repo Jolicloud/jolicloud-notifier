@@ -1,3 +1,10 @@
+jolicloud-notifier (1.1.2) robby-lucid; urgency=low
+
+  * Actually apply the dpkg-divert --removal required by the previous
+    changelog
+
+ -- Adam McDaniel <adam@jolicloud.org>  Tue, 21 Sep 2010 14:24:58 -0600
+
 jolicloud-notifier (1.1.1) robby-lucid; urgency=low
 
   * Temporary injunction to disable link to update-notifier, major
