@@ -1,3 +1,10 @@
+jolicloud-notifier (1.1.0) robby-lucid; urgency=low
+
+  * Updated control to say replaces update-notifier-common
+  * Rebased version to reflect Jolicloud V1.1 status
+
+ -- Adam McDaniel <adam@jolicloud.org>  Tue, 21 Sep 2010 11:23:21 -0600
+
 jolicloud-notifier (1.0.1) robby-upgrade; urgency=low
 
   * Added some debug logs into reboot-dialog.pl
