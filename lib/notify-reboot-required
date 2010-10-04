@@ -1,6 +1,5 @@
 #!/bin/sh
 
-if [ ! -e /var/run/reboot-required ]; then
-    /usr/bin/apt-queue /usr/lib/jolicloud-notifier/reboot-dialog
-    touch /var/run/reboot-required
+if [ -e /var/run/reboot-required ]; then
+    /usr/lib/jolicloud-notifier/reboot-dialog
 fi

@@ -8,7 +8,7 @@ Homepage: http://www.jolicloud.com
 
 Package: jolicloud-notifier
 Architecture: any
-Depends: apt-queue, libgtk2-gladexml-perl
+Depends: libgtk2-gladexml-perl
 Replaces: update-notifier-common
 Description: Jolicloud Notifier
  The Jolicloud notifier displays the state of the Jolicloud daemon.

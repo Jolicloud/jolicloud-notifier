@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Wrapper script for reboot-dialog.pl incase it gets ran by root via
-# apt-queue process.
+# apt-queue or dpkg process.
 #
 
 # XAuthority may already exists, but force rediscovering the user's

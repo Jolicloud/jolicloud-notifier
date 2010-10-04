@@ -1,2 +1,3 @@
 share/* /usr/share
 lib/* /usr/lib/jolicloud-notifier
+apt.conf.d* /etc/apt/apt.conf.d

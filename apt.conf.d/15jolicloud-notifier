@@ -1,0 +1,2 @@
+Dpkg::Post-Invoke {"( /usr/lib/jolicloud-notifier/notify-reboot-required 2>&1 >/dev/null || true ) &";};
+
