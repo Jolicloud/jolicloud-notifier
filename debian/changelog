@@ -1,3 +1,13 @@
+jolicloud-notifier (1.1.5) robby-lucid; urgency=low
+
+  * Correct the execution of notify-reboot-required from within
+    PackageKit
+  * Disable the "Reboot" button after it's been clicked, indicating the
+    reboot process has started and the button cannot be clicked again
+    while working.
+
+ -- Adam McDaniel <adam@jolicloud.org>  Mon, 04 Oct 2010 14:41:11 -0600
+
 jolicloud-notifier (1.1.4) robby-lucid; urgency=low
 
   * Corrected the location where apt.conf.d files are installed
