@@ -6,7 +6,6 @@ use Net::DBus;
 use Data::Dumper;
 
 
-print Dumper { %ENV };
 &reboot_dialog();
 
 sub reboot_dialog {
@@ -27,6 +26,12 @@ sub gtk_main_quit {
 }
 
 sub on_buttonOK_clicked {
+    my $button = shift;
+
+    # Disable the button, indicating that it has been clicked and the
+    # process is activating
+    $button->set_sensitive( 0 );
+
     my $bus = Net::DBus->system();
     eval {
         my $service = $bus->get_service( "org.freedesktop.Hal" );
@@ -67,6 +72,11 @@ sub on_buttonOK_clicked {
     else {
         return;
     }
+
+    # If we get here, we couldn't shutdown cleanly, re-enable the button to
+    # try again.
+    # FIXME: Display a message.
+    $button->set_sensitive( 1 );
 }
 
 sub on_buttonCancel_clicked {
