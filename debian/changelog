@@ -1,3 +1,10 @@
+jolicloud-notifier (1.1.6) robby; urgency=low
+
+  * Add a simple locking mechanism to avoid duplicate simultaneous
+    reboot-notification popup messages.
+
+ -- Adam McDaniel <adam@jolicloud.org>  Fri, 03 Dec 2010 04:54:57 -0700
+
 jolicloud-notifier (1.1.5) robby-lucid; urgency=low
 
   * Correct the execution of notify-reboot-required from within
