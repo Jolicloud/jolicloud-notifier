@@ -5,8 +5,21 @@ use Gtk2::GladeXML;
 use Net::DBus;
 use Data::Dumper;
 
+my $lock = "/var/lock/reboot-dialog.lock";
 
+&set_lock( $lock ) || exit 0;
 &reboot_dialog();
+unlink( $lock );
+
+sub set_lock {
+    if ( -l $lock && -d '/proc/' . readlink( $lock ) ) {
+        return 0;
+    }
+    unlink( $lock );
+    symlink( $$, $lock );
+
+    return 1;
+}
 
 sub reboot_dialog {
     Gtk2->init();
