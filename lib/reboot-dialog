@@ -19,6 +19,13 @@ fi
 
 env
 
+# If apt-queue is running in tandem, but did not trigger the
+# update-notification itself, jolicloud-notifier must wait until apt-queue
+# is finished before displaying the popup to reboot.
+while pgrep apt-queue > /dev/null; do
+    sleep 1;
+done
+
 echo "Calling Perl"
 /usr/lib/jolicloud-notifier/reboot-dialog.pl $@ 2>&1
 echo "done: $?"
