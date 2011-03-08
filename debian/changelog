@@ -1,3 +1,11 @@
+jolicloud-notifier (1.2.0) robby-1.2; urgency=low
+
+  * If apt-queue is running in tandem, but did not trigger the update-
+    notification itself, jolicloud-notifier must wait until apt-queue is
+    finished before displaying the popup to reboot.
+
+ -- Adam McDaniel <adam@jolicloud.org>  Tue, 08 Mar 2011 13:57:56 -0700
+
 jolicloud-notifier (1.1.6) robby; urgency=low
 
   * Add a simple locking mechanism to avoid duplicate simultaneous
