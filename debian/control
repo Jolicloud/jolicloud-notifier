@@ -5,6 +5,8 @@ Maintainer: Jolicloud developers <developers@jolicloud.org>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.0
 Homepage: http://www.jolicloud.com
+Vcs-Git: git://github.com/jolicloud/jolicloud-notifier.git
+Vcs-Browser: https://github.com/jolicloud/jolicloud-notifier
 
 Package: jolicloud-notifier
 Architecture: any
