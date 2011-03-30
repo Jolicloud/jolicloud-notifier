@@ -13,6 +13,5 @@ Architecture: any
 Depends: libgtk2-gladexml-perl
 Replaces: update-notifier-common
 Description: Jolicloud Notifier
- The Jolicloud notifier displays the state of the Jolicloud daemon.
- It notifies the users of new updates from Jolicloud
- and from the system.
+ The Jolicloud notifier notifies the users of reboots after new updates
+ from Jolicloud and from the system.
