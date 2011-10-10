@@ -22,7 +22,7 @@ env
 # If apt-queue is running in tandem, but did not trigger the
 # update-notification itself, jolicloud-notifier must wait until apt-queue
 # is finished before displaying the popup to reboot.
-while pgrep apt-queue > /dev/null; do
+while pgrep -f -l apt-queue | grep -v 'reboot-dialog$' > /dev/null; do
     sleep 1;
 done
 
